@@ -70,6 +70,32 @@
       <customproperties>
         <Option/>
       </customproperties>
+    </layer-tree-layer>
+    <layer-tree-layer legend_exp="" expanded="1" id="index1in50k_9fb9979e_c859_4ba1_93c1_0689730e3eb6" name="South Africa Map Sheet Index 1in50k" patch_size="-1,-1" source="./data/index1in50k.shp" legend_split_behavior="0" checked="Qt::Checked" providerKey="ogr">
+      <customproperties>
+        <Option/>
+      </customproperties>
+    </layer-tree-layer>
+    <layer-tree-layer legend_exp="" expanded="0" id="sanbi_ne_10m_airports_52f2e323_40df_4b17_90d4_c8c272553226" name="Airports" patch_size="-1,-1" source=" IgnoreAxisOrientation='1' pageSize='1000000' pagingEnabled='default' preferCoordinatesForWfsT11='false' restrictToRequestBBOX='1' srsname='EPSG:4326' typename='sanbi:ne_10m_airports' url='https://maps.kartoza.com/geoserver/wfs' version='1.0.0'" legend_split_behavior="0" checked="Qt::Unchecked" providerKey="WFS">
+      <customproperties>
+        <Option type="Map">
+          <Option type="invalid" name="expandedLegendNodes"/>
+        </Option>
+      </customproperties>
+    </layer-tree-layer>
+    <layer-tree-layer legend_exp="" expanded="0" id="SA_sea_ports_e6234252_479d_4983_8dbb_08c94a61b29f" name="Sea Ports" patch_size="-1,-1" source="./data/sa.gpkg|layername=SA_sea_ports" legend_split_behavior="0" checked="Qt::Unchecked" providerKey="ogr">
+      <customproperties>
+        <Option type="Map">
+          <Option type="invalid" name="expandedLegendNodes"/>
+        </Option>
+      </customproperties>
+    </layer-tree-layer>
+    <layer-tree-group expanded="0" name="Mining" groupLayer="" checked="Qt::Unchecked">
+      <customproperties>
+        <Option type="Map">
+          <Option type="QString" name="wmsShortName" value="Mining"/>
+        </Option>
+      </customproperties>
       <shortname>Mining</shortname>
       <layer-tree-layer id="sa_all_mines_aug24_726b3e7d_b058_4a60_94d1_d2d2d385c65c" name="Active Mines (August 2024)" checked="Qt::Unchecked" patch_size="-1,-1" legend_exp="" expanded="0" source="./data/sa.gpkg|layername=sa_all_mines_aug24" providerKey="ogr" legend_split_behavior="0">
         <customproperties>
@@ -114,7 +140,9 @@
     </layer-tree-layer>
     <layer-tree-group groupLayer="" name="Drainage Basins (Catchments)" checked="Qt::Unchecked" expanded="0">
       <customproperties>
-        <Option/>
+        <Option type="Map">
+          <Option type="QString" name="wmsShortName" value="Drainage_Basins__Catchments"/>
+        </Option>
       </customproperties>
       <shortname>Drainage_Basins__Catchments</shortname>
       <layer-tree-layer id="_b2f1edd8_620d_4243_938d_76ad769f1902" name="Primary Catchment" checked="Qt::Unchecked" patch_size="-1,-1" legend_exp="" expanded="0" source="contextualWMSLegend=0&amp;crs=EPSG:3857&amp;dpiMode=7&amp;format=image/png&amp;layers=kartoza:primary_catchment_area&amp;styles=kartoza:sagta_primary_catchment_area&amp;tilePixelRatio=0&amp;url=https://maps.kartoza.com/geoserver/wms" providerKey="wms" legend_split_behavior="0">
@@ -169,7 +197,9 @@
     </layer-tree-layer>
     <layer-tree-group groupLayer="" name="Monthly Average Rainfall" checked="Qt::Unchecked" expanded="0">
       <customproperties>
-        <Option/>
+        <Option type="Map">
+          <Option type="QString" name="wmsShortName" value="Monthly_Average_Rainfall"/>
+        </Option>
       </customproperties>
       <shortname>Monthly_Average_Rainfall</shortname>
       <layer-tree-layer id="Monthly_Rainfall_and_its_Inter_Annual_Variability__January_Monthly_Rainfall_and_its_Inter_Annual_Variability__January__02e6ae49_2c1c_4ca0_84bc_5a44c12e8d7b" name="Monthly Rainfall (January)" checked="Qt::Unchecked" patch_size="-1,-1" legend_exp="" expanded="0" source="dpiMode=7&amp;identifier=kartoza:gmednrfl1&amp;tilePixelRatio=0&amp;url=https://maps.kartoza.com/geoserver/wcs" providerKey="wcs" legend_split_behavior="0">
@@ -259,7 +289,9 @@
     </layer-tree-group>
     <layer-tree-group groupLayer="" name="Monthly Average Temperatures" checked="Qt::Unchecked" expanded="0">
       <customproperties>
-        <Option/>
+        <Option type="Map">
+          <Option type="QString" name="wmsShortName" value="Monthly_Average_Temperatures"/>
+        </Option>
       </customproperties>
       <shortname>Monthly_Average_Temperatures</shortname>
       <layer-tree-layer id="Monthly_Means_Of_Daily_Average_Temperature__C__January_7dccbec0_da20_432c_a4f1_7d88ccfec1d8" name="Monthly Means Of Daily Average Temperature (C) January" checked="Qt::Unchecked" patch_size="-1,-1" legend_exp="" expanded="0" source="dpiMode=7&amp;identifier=kartoza:tmean01c&amp;tilePixelRatio=0&amp;url=https://maps.kartoza.com/geoserver/wcs" providerKey="wcs" legend_split_behavior="0">
@@ -411,7 +443,9 @@
     </layer-tree-group>
     <layer-tree-group groupLayer="" name="overview" checked="Qt::Unchecked" expanded="1">
       <customproperties>
-        <Option/>
+        <Option type="Map">
+          <Option type="QString" name="wmsShortName" value="overview"/>
+        </Option>
       </customproperties>
       <shortname>overview</shortname>
       <layer-tree-layer id="provinces_4colour_a99cd047_89e6_452c_b6b0_e515e9b77663" name="overview South Africa Provinces" checked="Qt::Checked" patch_size="-1,-1" legend_exp="" expanded="0" source="./data/provinces_4colour.shp" providerKey="ogr" legend_split_behavior="0">
@@ -1896,7 +1930,7 @@ def my_form_open(dialog, layer, feature):
       <shortname>DWA_Dams</shortname>
       <provider>wms</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="0"/>
+        <noDataList useSrcNoData="0" bandNo="1"/>
       </noData>
       <map-layer-style-manager current="default">
         <map-layer-style name="default"/>
@@ -2101,7 +2135,7 @@ def my_form_open(dialog, layer, feature):
    projections, Scientific Data 10, 724 (2023).</abstract>
       <provider>gdal</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="1"/>
+        <noDataList useSrcNoData="1" bandNo="1"/>
       </noData>
       <map-layer-style-manager current="default">
         <map-layer-style name="default"/>
@@ -2337,7 +2371,7 @@ def my_form_open(dialog, layer, feature):
       <shortname>Monthly_Means_Of_Daily_Average_Temperature__C__April</shortname>
       <provider>wcs</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="1"/>
+        <noDataList useSrcNoData="1" bandNo="1"/>
       </noData>
       <map-layer-style-manager current="default">
         <map-layer-style name="default"/>
@@ -2618,7 +2652,7 @@ def my_form_open(dialog, layer, feature):
       <shortname>Monthly_Means_Of_Daily_Average_Temperature__C__August</shortname>
       <provider>wcs</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="1"/>
+        <noDataList useSrcNoData="1" bandNo="1"/>
       </noData>
       <map-layer-style-manager current="default">
         <map-layer-style name="default"/>
@@ -2899,7 +2933,7 @@ def my_form_open(dialog, layer, feature):
       <shortname>Monthly_Means_Of_Daily_Average_Temperature__C__December</shortname>
       <provider>wcs</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="1"/>
+        <noDataList useSrcNoData="1" bandNo="1"/>
       </noData>
       <map-layer-style-manager current="default">
         <map-layer-style name="default"/>
@@ -3180,7 +3214,7 @@ def my_form_open(dialog, layer, feature):
       <shortname>Monthly_Means_Of_Daily_Average_Temperature__C__February</shortname>
       <provider>wcs</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="1"/>
+        <noDataList useSrcNoData="1" bandNo="1"/>
       </noData>
       <map-layer-style-manager current="default">
         <map-layer-style name="default"/>
@@ -3461,7 +3495,7 @@ def my_form_open(dialog, layer, feature):
       <shortname>Monthly_Means_Of_Daily_Average_Temperature__C__January</shortname>
       <provider>wcs</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="1"/>
+        <noDataList useSrcNoData="1" bandNo="1"/>
       </noData>
       <map-layer-style-manager current="default">
         <map-layer-style name="default"/>
@@ -3699,7 +3733,7 @@ def my_form_open(dialog, layer, feature):
       <shortname>Monthly_Means_Of_Daily_Average_Temperature__C__July</shortname>
       <provider>wcs</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="1"/>
+        <noDataList useSrcNoData="1" bandNo="1"/>
       </noData>
       <map-layer-style-manager current="default">
         <map-layer-style name="default"/>
@@ -3980,7 +4014,7 @@ def my_form_open(dialog, layer, feature):
       <shortname>Monthly_Means_Of_Daily_Average_Temperature__C__June</shortname>
       <provider>wcs</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="1"/>
+        <noDataList useSrcNoData="1" bandNo="1"/>
       </noData>
       <map-layer-style-manager current="default">
         <map-layer-style name="default"/>
@@ -4261,7 +4295,7 @@ def my_form_open(dialog, layer, feature):
       <shortname>Monthly_Means_Of_Daily_Average_Temperature__C__March</shortname>
       <provider>wcs</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="1"/>
+        <noDataList useSrcNoData="1" bandNo="1"/>
       </noData>
       <map-layer-style-manager current="default">
         <map-layer-style name="default"/>
@@ -4542,7 +4576,7 @@ def my_form_open(dialog, layer, feature):
       <shortname>Monthly_Means_Of_Daily_Average_Temperature__C__May</shortname>
       <provider>wcs</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="1"/>
+        <noDataList useSrcNoData="1" bandNo="1"/>
       </noData>
       <map-layer-style-manager current="default">
         <map-layer-style name="default"/>
@@ -4823,7 +4857,7 @@ def my_form_open(dialog, layer, feature):
       <shortname>Monthly_Means_Of_Daily_Average_Temperature__C__November</shortname>
       <provider>wcs</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="1"/>
+        <noDataList useSrcNoData="1" bandNo="1"/>
       </noData>
       <map-layer-style-manager current="default">
         <map-layer-style name="default"/>
@@ -5104,7 +5138,7 @@ def my_form_open(dialog, layer, feature):
       <shortname>Monthly_Means_Of_Daily_Average_Temperature__C__October</shortname>
       <provider>wcs</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="1"/>
+        <noDataList useSrcNoData="1" bandNo="1"/>
       </noData>
       <map-layer-style-manager current="default">
         <map-layer-style name="default"/>
@@ -5385,7 +5419,7 @@ def my_form_open(dialog, layer, feature):
       <shortname>Monthly_Means_Of_Daily_Average_Temperature__C__September</shortname>
       <provider>wcs</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="1"/>
+        <noDataList useSrcNoData="1" bandNo="1"/>
       </noData>
       <map-layer-style-manager current="default">
         <map-layer-style name="default"/>
@@ -5683,7 +5717,7 @@ def my_form_open(dialog, layer, feature):
       <shortname>Monthly_Rainfall_and_its_Inter-Annual_Variability__April</shortname>
       <provider>wcs</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="1"/>
+        <noDataList useSrcNoData="1" bandNo="1"/>
       </noData>
       <map-layer-style-manager current="default">
         <map-layer-style name="default"/>
@@ -5924,7 +5958,7 @@ def my_form_open(dialog, layer, feature):
       <shortname>Monthly_Rainfall_and_its_Inter-Annual_Variability__August</shortname>
       <provider>wcs</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="1"/>
+        <noDataList useSrcNoData="1" bandNo="1"/>
       </noData>
       <map-layer-style-manager current="default">
         <map-layer-style name="default"/>
@@ -6162,7 +6196,7 @@ def my_form_open(dialog, layer, feature):
       <shortname>Monthly_Rainfall_and_its_Inter-Annual_Variability__December</shortname>
       <provider>wcs</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="1"/>
+        <noDataList useSrcNoData="1" bandNo="1"/>
       </noData>
       <map-layer-style-manager current="default">
         <map-layer-style name="default"/>
@@ -6400,7 +6434,7 @@ def my_form_open(dialog, layer, feature):
       <shortname>Monthly_Rainfall_and_its_Inter-Annual_Variability__February</shortname>
       <provider>wcs</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="1"/>
+        <noDataList useSrcNoData="1" bandNo="1"/>
       </noData>
       <map-layer-style-manager current="default">
         <map-layer-style name="default"/>
@@ -6655,7 +6689,7 @@ def my_form_open(dialog, layer, feature):
       <shortname>Monthly_Rainfall_and_its_Inter-Annual_Variability__January_Monthly_Rainfall_and_its_Inter-Annual_Variability__January</shortname>
       <provider>wcs</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="1"/>
+        <noDataList useSrcNoData="1" bandNo="1"/>
       </noData>
       <map-layer-style-manager current="default">
         <map-layer-style name="default"/>
@@ -6939,7 +6973,7 @@ def my_form_open(dialog, layer, feature):
       <shortname>Monthly_Rainfall_and_its_Inter-Annual_Variability__July</shortname>
       <provider>wcs</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="1"/>
+        <noDataList useSrcNoData="1" bandNo="1"/>
       </noData>
       <map-layer-style-manager current="default">
         <map-layer-style name="default"/>
@@ -7177,7 +7211,7 @@ def my_form_open(dialog, layer, feature):
       <shortname>Monthly_Rainfall_and_its_Inter-Annual_Variability__June</shortname>
       <provider>wcs</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="1"/>
+        <noDataList useSrcNoData="1" bandNo="1"/>
       </noData>
       <map-layer-style-manager current="default">
         <map-layer-style name="default"/>
@@ -7415,7 +7449,7 @@ def my_form_open(dialog, layer, feature):
       <shortname>Monthly_Rainfall_and_its_Inter-Annual_Variability__March</shortname>
       <provider>wcs</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="1"/>
+        <noDataList useSrcNoData="1" bandNo="1"/>
       </noData>
       <map-layer-style-manager current="default">
         <map-layer-style name="default"/>
@@ -7653,7 +7687,7 @@ def my_form_open(dialog, layer, feature):
       <shortname>Monthly_Rainfall_and_its_Inter-Annual_Variability__May</shortname>
       <provider>wcs</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="1"/>
+        <noDataList useSrcNoData="1" bandNo="1"/>
       </noData>
       <map-layer-style-manager current="default">
         <map-layer-style name="default"/>
@@ -7891,7 +7925,7 @@ def my_form_open(dialog, layer, feature):
       <shortname>Monthly_Rainfall_and_its_Inter-Annual_Variability__November</shortname>
       <provider>wcs</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="1"/>
+        <noDataList useSrcNoData="1" bandNo="1"/>
       </noData>
       <map-layer-style-manager current="default">
         <map-layer-style name="default"/>
@@ -8129,7 +8163,7 @@ def my_form_open(dialog, layer, feature):
       <shortname>Monthly_Rainfall_and_its_Inter-Annual_Variability__October</shortname>
       <provider>wcs</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="1"/>
+        <noDataList useSrcNoData="1" bandNo="1"/>
       </noData>
       <map-layer-style-manager current="default">
         <map-layer-style name="default"/>
@@ -8367,7 +8401,7 @@ def my_form_open(dialog, layer, feature):
       <shortname>Monthly_Rainfall_and_its_Inter-Annual_Variability__September</shortname>
       <provider>wcs</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="1"/>
+        <noDataList useSrcNoData="1" bandNo="1"/>
       </noData>
       <map-layer-style-manager current="default">
         <map-layer-style name="default"/>
@@ -8607,7 +8641,7 @@ def my_form_open(dialog, layer, feature):
       <attribution href="https://www.ign.fr/">IGN France</attribution>
       <provider>wms</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="0"/>
+        <noDataList useSrcNoData="0" bandNo="1"/>
       </noData>
       <map-layer-style-manager current="default">
         <map-layer-style name="default"/>
@@ -9387,7 +9421,7 @@ def my_form_open(dialog, layer, feature):
       <legendUrl format="image/png">https://maps.kartoza.com/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image/png&amp;width=20&amp;height=20&amp;layer=kartoza:south_africa&amp;</legendUrl>
       <provider>wms</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="0"/>
+        <noDataList useSrcNoData="0" bandNo="1"/>
       </noData>
       <map-layer-style-manager current="default">
         <map-layer-style name="default"/>
@@ -9608,7 +9642,7 @@ def my_form_open(dialog, layer, feature):
       <shortname>secondary_catchment</shortname>
       <provider>wms</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="0"/>
+        <noDataList useSrcNoData="0" bandNo="1"/>
       </noData>
       <map-layer-style-manager current="default">
         <map-layer-style name="default"/>
@@ -9819,7 +9853,7 @@ def my_form_open(dialog, layer, feature):
       <shortname>OpenStreetMap_1</shortname>
       <provider>wms</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="0"/>
+        <noDataList useSrcNoData="0" bandNo="1"/>
       </noData>
       <map-layer-style-manager current="default">
         <map-layer-style name="default"/>
@@ -10038,7 +10072,7 @@ def my_form_open(dialog, layer, feature):
       <legendUrl format="image/png">https://maps.kartoza.com/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image/png&amp;width=20&amp;height=20&amp;layer=sanbi:map_zones&amp;image/png</legendUrl>
       <provider>wms</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="0"/>
+        <noDataList useSrcNoData="0" bandNo="1"/>
       </noData>
       <map-layer-style-manager current="default">
         <map-layer-style name="default"/>
@@ -10249,7 +10283,7 @@ def my_form_open(dialog, layer, feature):
       <shortname>OpenStreetMap</shortname>
       <provider>wms</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="0"/>
+        <noDataList useSrcNoData="0" bandNo="1"/>
       </noData>
       <map-layer-style-manager current="default">
         <map-layer-style name="default"/>
@@ -10467,7 +10501,7 @@ def my_form_open(dialog, layer, feature):
       <shortname>quaternary_catchment</shortname>
       <provider>wms</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="0"/>
+        <noDataList useSrcNoData="0" bandNo="1"/>
       </noData>
       <map-layer-style-manager current="default">
         <map-layer-style name="default"/>
@@ -10688,7 +10722,7 @@ def my_form_open(dialog, layer, feature):
       <shortname>primary_catchment</shortname>
       <provider>wms</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="0"/>
+        <noDataList useSrcNoData="0" bandNo="1"/>
       </noData>
       <map-layer-style-manager current="default">
         <map-layer-style name="default"/>
@@ -10910,7 +10944,7 @@ def my_form_open(dialog, layer, feature):
       <legendUrl format="image/png">https://maps.kartoza.com/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image/png&amp;width=20&amp;height=20&amp;layer=kartoza:geology_rsa&amp;</legendUrl>
       <provider>wms</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="0"/>
+        <noDataList useSrcNoData="0" bandNo="1"/>
       </noData>
       <map-layer-style-manager current="default">
         <map-layer-style name="default"/>
@@ -11131,7 +11165,7 @@ def my_form_open(dialog, layer, feature):
       <shortname>tertiary_catchment</shortname>
       <provider>wms</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="0"/>
+        <noDataList useSrcNoData="0" bandNo="1"/>
       </noData>
       <map-layer-style-manager current="default">
         <map-layer-style name="default"/>
@@ -11354,7 +11388,7 @@ def my_form_open(dialog, layer, feature):
 </legendUrl>
       <provider>wms</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="0"/>
+        <noDataList useSrcNoData="0" bandNo="1"/>
       </noData>
       <map-layer-style-manager current="default">
         <map-layer-style name="default"/>
@@ -11558,7 +11592,7 @@ def my_form_open(dialog, layer, feature):
       <shortname>Analysed_sea_surface_temperature__analysed_sst</shortname>
       <provider>wms</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="0"/>
+        <noDataList useSrcNoData="0" bandNo="1"/>
       </noData>
       <map-layer-style-manager current="default">
         <map-layer-style name="default"/>
@@ -11754,7 +11788,7 @@ def my_form_open(dialog, layer, feature):
       <shortname>dwa_rivers</shortname>
       <provider>wms</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="0"/>
+        <noDataList useSrcNoData="0" bandNo="1"/>
       </noData>
       <map-layer-style-manager current="default">
         <map-layer-style name="default"/>
@@ -19999,7 +20033,7 @@ def my_form_open(dialog, layer, feature):
       <shortname>Population_Density_2020__1km_Resolution</shortname>
       <provider>gdal</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="1"/>
+        <noDataList useSrcNoData="1" bandNo="1"/>
       </noData>
       <map-layer-style-manager current="default">
         <map-layer-style name="default"/>
@@ -20452,7 +20486,7 @@ def my_form_open(dialog, layer, feature):
   </dataDefinedServerProperties>
   <visibility-presets/>
   <transformContext>
-    <srcDest allowFallback="1" coordinateOp="+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +inv +proj=longlat +a=6378249.145 +rf=293.4663077 +step +proj=push +v_3 +step +proj=cart +a=6378249.145 +rf=293.4663077 +step +proj=helmert +x=-136 +y=-108 +z=-292 +step +inv +proj=cart +ellps=WGS84 +step +proj=pop +v_3 +step +proj=webmerc +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +ellps=WGS84">
+    <srcDest coordinateOp="+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +inv +proj=longlat +a=6378249.145 +rf=293.4663077 +step +proj=push +v_3 +step +proj=cart +a=6378249.145 +rf=293.4663077 +step +proj=helmert +x=-136 +y=-108 +z=-292 +step +inv +proj=cart +ellps=WGS84 +step +proj=pop +v_3 +step +proj=webmerc +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +ellps=WGS84" allowFallback="1">
       <src>
         <spatialrefsys nativeFormat="Wkt">
           <wkt>GEOGCRS["Cape",DATUM["Cape",ELLIPSOID["Clarke 1880 (Arc)",6378249.145,293.4663077,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],CS[ellipsoidal,2],AXIS["geodetic latitude (Lat)",north,ORDER[1],ANGLEUNIT["degree",0.0174532925199433]],AXIS["geodetic longitude (Lon)",east,ORDER[2],ANGLEUNIT["degree",0.0174532925199433]],USAGE[SCOPE["Geodesy."],AREA["Botswana; Eswatini (Swaziland); Lesotho; South Africa - mainland."],BBOX[-34.88,16.45,-17.78,32.95]],ID["EPSG",4222]]</wkt>
@@ -20480,7 +20514,7 @@ def my_form_open(dialog, layer, feature):
         </spatialrefsys>
       </dest>
     </srcDest>
-    <srcDest allowFallback="1" coordinateOp="+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=webmerc +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +ellps=WGS84">
+    <srcDest coordinateOp="+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=webmerc +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +ellps=WGS84" allowFallback="1">
       <src>
         <spatialrefsys nativeFormat="Wkt">
           <wkt>GEOGCRS["GCS_Assumed_Geographic_1",DATUM["North American Datum 1927",ELLIPSOID["Clarke 1866",6378206.4,294.978698213898,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],CS[ellipsoidal,2],AXIS["geodetic latitude (Lat)",north,ORDER[1],ANGLEUNIT["degree",0.0174532925199433]],AXIS["geodetic longitude (Lon)",east,ORDER[2],ANGLEUNIT["degree",0.0174532925199433]],USAGE[SCOPE["Not known."],AREA["Not specified."],BBOX[-90,-180,90,180]],ID["ESRI",104000]]</wkt>
@@ -27252,7 +27286,7 @@ def my_form_open(dialog, layer, feature):
   <mapViewDocks3D/>
   <Bookmarks/>
   <Sensors/>
-  <ProjectViewSettings rotation="0" UseProjectScales="0">
+  <ProjectViewSettings UseProjectScales="0" rotation="0">
     <Scales/>
     <DefaultViewExtent xmin="2599971.7214796831831336" ymin="-3623909.6826120768673718" xmax="3181525.88814635016024113" ymax="-3300059.6826120768673718">
       <spatialrefsys nativeFormat="Wkt">
@@ -27268,7 +27302,7 @@ def my_form_open(dialog, layer, feature):
       </spatialrefsys>
     </DefaultViewExtent>
   </ProjectViewSettings>
-  <ProjectStyleSettings iccProfileId="attachment:///QGIS3-tzrDlm" projectStyleId="attachment:///zlgHjG_styles.db" colorModel="Rgb" RandomizeDefaultSymbolColor="1" DefaultSymbolOpacity="1">
+  <ProjectStyleSettings iccProfileId="attachment:///QGIS3-tzrDlm" colorModel="Rgb" RandomizeDefaultSymbolColor="1" projectStyleId="attachment:///zlgHjG_styles.db" DefaultSymbolOpacity="1">
     <databases/>
   </ProjectStyleSettings>
   <ProjectTimeSettings totalMovieFrames="100" timeStepUnit="d" timeStep="1" frameRate="1" cumulativeTemporalRange="0"/>
