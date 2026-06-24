@@ -1,5 +1,5 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis saveUser="jeremy" projectname="" saveUserFull="Jeremy" version="3.44.7-Solothurn" saveDateTime="2026-06-24T15:49:27">
+<qgis saveUser="jeremy" projectname="" saveUserFull="Jeremy" version="3.44.7-Solothurn" saveDateTime="2026-06-24T16:01:32">
   <homePath path=""/>
   <title></title>
   <transaction mode="AutomaticGroups"/>
@@ -37,7 +37,9 @@
     </customproperties>
     <layer-tree-group expanded="1" groupLayer="" checked="Qt::Unchecked" name="NGI Topo Vectors">
       <customproperties>
-        <Option/>
+        <Option type="Map">
+          <Option value="NGI_Topo_Vectors" type="QString" name="wmsShortName"/>
+        </Option>
       </customproperties>
       <shortname>NGI_Topo_Vectors</shortname>
       <layer-tree-layer expanded="1" patch_size="0,0" legend_exp="" legend_split_behavior="0" checked="Qt::Unchecked" name="South Africa Elevation Points >1in20k" id="5m_Spot_Heights_0dc42c98_5fea_4222_8976_6e6061296324" source="contextualWMSLegend=0&amp;crs=EPSG:3857&amp;dpiMode=7&amp;featureCount=10&amp;format=image/png&amp;layers=kartoza:5m_spot_heights&amp;styles&amp;url=https://maps.kartoza.com/geoserver/wms" providerKey="wms">
@@ -69,7 +71,9 @@
     </layer-tree-group>
     <layer-tree-group expanded="1" groupLayer="" checked="Qt::Unchecked" name="Overview">
       <customproperties>
-        <Option/>
+        <Option type="Map">
+          <Option value="Overview" type="QString" name="wmsShortName"/>
+        </Option>
       </customproperties>
       <shortname>Overview</shortname>
       <layer-tree-layer expanded="0" patch_size="-1,-1" legend_exp="" legend_split_behavior="0" checked="Qt::Unchecked" name="namibia_provinces_4colour" id="namibia_provinces_4colour_a4559d2b_f440_42d1_b3b8_84169e0935f3" source="./data/namibia_provinces_4colour.shp" providerKey="ogr">
@@ -95,7 +99,9 @@
     </layer-tree-group>
     <layer-tree-group expanded="1" groupLayer="" checked="Qt::Checked" name="Map Guide">
       <customproperties>
-        <Option/>
+        <Option type="Map">
+          <Option value="Map_Guide" type="QString" name="wmsShortName"/>
+        </Option>
       </customproperties>
       <shortname>Map_Guide</shortname>
       <layer-tree-layer expanded="1" patch_size="0,0" legend_exp="" legend_split_behavior="0" checked="Qt::Unchecked" name="South Africa Map sheet index 1in10k" id="index1in10k_fd8a96fa_411c_4d74_b71e_247000c88b37" source="./data/index1in10k.shp|layername=index1in10k" providerKey="ogr">
@@ -126,12 +132,16 @@
     </layer-tree-group>
     <layer-tree-group expanded="1" groupLayer="" checked="Qt::Checked" mutually-exclusive-child="0" name="baselayers" mutually-exclusive="1">
       <customproperties>
-        <Option/>
+        <Option type="Map">
+          <Option value="baselayers" type="QString" name="wmsShortName"/>
+        </Option>
       </customproperties>
       <shortname>baselayers</shortname>
       <layer-tree-group expanded="1" groupLayer="" checked="Qt::Checked" name="1in50K Topographic Basemap">
         <customproperties>
-          <Option/>
+          <Option type="Map">
+            <Option value="l_1in50K_Topographic_Basemap" type="QString" name="wmsShortName"/>
+          </Option>
         </customproperties>
         <shortname>Topographic_Basemap</shortname>
         <layer-tree-layer expanded="1" patch_size="0,0" legend_exp="" legend_split_behavior="0" checked="Qt::Checked" name="South Africa 1in50k Topographic map" id="OSM_Toposheets_NGI_1e993297_33c9_49a0_9395_0e8e9021ba97" source="crs=EPSG:3857&amp;format&amp;http-header:referer=&amp;tilePixelRatio=1&amp;type=xyz&amp;url=https://sta.sagta.kartoza.com/yflip/proxy/htonl.dev.openstreetmap.org/ngi-tiles/tiles/50k/%7Bz%7D/%7Bx%7D/%7By%7D.png&amp;zmax=15&amp;zmin=0" providerKey="wms">
